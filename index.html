@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="icon.png">
+        <title>My Personal Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+    </head>
+    <body>
+        <div class="background">
+            <div class="nav">
+                <a class="a active" href="#">Home</a>
+                <a class="b" href="#">About me</a>
+                <a class="c" href="#">Gallery</a>
+                <a class="d" href="#">Social media</a>
+            </div>
+            <div class="content">
+                <div class="home">
+                    <h1>I am Asja Bajramović</h1>
+                    <h3>A ballerina and a programmer</h3>
+                </div>
+                <div class="aboutus">
+                    <p><b>Hi everyone, my name is Asja Bajramović.</b> <br>
+                    <br>
+                    As I already said, I am a strange creature when it comes to doing what I love. Just like I found two of the things I love the most - programming and ballet - people said they're incompatible. But I found a way to break the social boundaries and show the world ballerinas are not just small, weak girls in tutus , that they can do everything they set their mind to.<br>
+                    I have a lot of goals I have set my mind to. I'm planning on finishing an IT college and working an IT job. Aside from that, I am creative and love writing and drawing, all self-thaught. I wish to draw and sell the drawings as another job.<br>
+                    Dancing ballet for over ten years, I fell deeply in love with it. It went on that far, that I had a class of around fifteen little girls (age 3-6) to teach in my ballet club, at the age of seventeen. That's also a job I could potentially do.<br>
+                    Dancing in a lot of ballet plays and shows and having to, of course, act in them, I had a lot of actors and teachers tell me my acting skills are exquisite. Even though I have thought about taking acting classes as a kid, that surely made me want to act more. Perhaps in the future, I'd succeed as an actress. I'd surely like that.</p>
+                </div>
+                <div class="gallery">
+                    <div class="image">
+                        <img src="pic1.jpg" alt="">   
+                    </div>
+                    <div class="image">
+                        <img src="pic2.jpg" alt=""> 
+                    </div>
+                    <div class="image">
+                        <img src="pic3.jpg" alt=""> 
+                    </div>
+                    <div class="image">
+                        <img src="pic4.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="pic5.1.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="pic6.jpg" alt=""> 
+                    </div>
+                    <div class="image">
+                        <img src="pic7.jpg" alt="">  
+                    </div>
+                    <div class="image">
+                        <img src="pic8.jpg" alt=""> 
+                    </div>
+                    <div class="image">
+                        <img src="pic9.jpg" alt=""> 
+                    </div>
+                    <div class="image">
+                        <img src="pic10.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="pic11.jpg" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="pic12.jpg" alt="">
+                    </div>
+                </div>
+                <div class="contactus">
+                    <h1>Follow me!</h1><br>
+                    <img src="facebook.png">
+                    <a href="https://www.facebook.com/asja.bajramovic">On Facebook</a><br>
+                    <img src="instagram.png">
+                    <a href="https://www.instagram.com/queen.of_hell666/?hl=hr">On Instagram</a><br>
+                    <img src="twitter.png">
+                    <a href="https://twitter.com/AsjaBajramovic?lang=hr">On Twitter</a>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+               $('a').click(function(){
+                   //alert("Hola");
+                   var selected = $(this);
+                   $('a').removeClass('active');
+                   $(selected).addClass('active');
+               }); 
+                var $a = $('.a'),
+                $b = $('.b'),
+                $c = $('.c'),
+                $d = $('.d'),
+                $home = $('.home'),
+                $aboutus = $('.aboutus'),
+                $gallery = $('.gallery'),
+                $contactus = $('.contactus');
+                
+                $a.click(function(){
+                    $home.fadeIn();
+                    $aboutus.fadeOut();
+                    $gallery.fadeOut();
+                    $contactus.fadeOut();
+                });
+                $b.click(function(){
+                    $aboutus.fadeIn();
+                    $home.fadeOut();                    
+                    $gallery.fadeOut();
+                    $contactus.fadeOut();
+                });
+                $c.click(function(){
+                    $gallery.fadeIn();
+                    $home.fadeOut();
+                    $aboutus.fadeOut();
+                    $contactus.fadeOut();
+                });
+                $d.click(function(){
+                    $contactus.fadeIn();
+                    $home.fadeOut();
+                    $aboutus.fadeOut();
+                    $gallery.fadeOut();                    
+                });
+            });
+        </script>
+    </body>
+</html>
